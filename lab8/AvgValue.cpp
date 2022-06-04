@@ -4,10 +4,10 @@
 
 template<typename T>
 T AvgValue(std::vector<T> vec){
-    T avg = 0;
+    T avg{};
     for (const auto &v: vec){
-        avg += v;
+        avg = avg + v;
     }
-    avg = avg/vec.size();
-    return avg;
+    T ans = avg/vec.size();
+    return ans;
 }
