@@ -14,9 +14,18 @@ public:
         this->X = X;
         this->Y = Y;
     };
+    Coordinates() : X(0), Y(0) {}
     T GetX(){return X;};
     T GetY(){return Y;};
     void type(){cout <<typeid (X).name() << endl;};
+
+    Coordinates<T> operator + (Coordinates p){
+        return Coordinates<int>(this->X + p.X, this->Y + p.Y);
+    }
+
+    Coordinates<T> operator / (int count){
+        return Coordinates<T>(this->X / count, this->Y / count);
+    }
 
 private:
     T X;
