@@ -52,5 +52,13 @@ int main()
     Coordinates<float> cor_f(x_f, y_f);
     cor_f.type();
 
+
+    // points on the flat
+    std::vector<Coordinates<int>> points{{11, -2},{4, 5},{-3, 6}};
+    // получим отдельно векторы значений координат точки
+    auto pointAvg = AvgValue(points);
+    std::cout << "point Average coordinates: " << "x = " << pointAvg.GetX() << " " << "y = " << pointAvg.GetY() << std::endl;
+
     return 0;
 }
+
